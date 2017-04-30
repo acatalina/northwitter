@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import request from 'superagent';
 import {NavBar} from './NavBar';
+import {ProfileCard} from './ProfileCard';
 import {getUserInfo} from '../lib/helpers';
 
 class App extends Component {
@@ -32,6 +33,7 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar avatar_url={this.state.userProfile.avatar_url}/>
+        <ProfileCard userProfile={this.state.userProfile}/>
       </div>
     );
   }
