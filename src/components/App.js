@@ -1,7 +1,9 @@
 import React,{Component} from 'react';
 import request from 'superagent';
+import PropTypes from 'prop-types';
 import {NavBar} from './NavBar';
 import {ProfileCard} from './ProfileCard';
+import Trends from './Trends';
 import {getUserInfo} from '../lib/helpers';
 
 class App extends Component {
@@ -34,9 +36,14 @@ class App extends Component {
       <div className="App">
         <NavBar avatar_url={this.state.userProfile.avatar_url}/>
         <ProfileCard userProfile={this.state.userProfile}/>
+        <Trends ROOT={this.props.ROOT}/>
       </div>
     );
   }
 }
+
+App.propTypes = {
+  ROOT: PropTypes.string.isRequired
+};
 
 export default App;
