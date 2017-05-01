@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import request from 'superagent';
 import {getTrends} from '../lib/helpers';
 import {Trend} from './Trend';
+import {Loading} from './Loading';
 
 class Trends extends Component {
   constructor (props) {
@@ -27,7 +28,7 @@ class Trends extends Component {
       });
   }
   render () {
-    if (!this.state.trends) return null;
+    if (this.state.fetching) return <Loading />;
     
     return (
       <section className="trends">

@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import request from 'superagent';
 import {Tweet} from './Tweet';
+import {Loading} from './Loading';
 import {getTweetsSortedByDate} from '../lib/helpers';
 
 class Tweets extends Component {
@@ -27,7 +28,7 @@ class Tweets extends Component {
       });
   }
   render () {
-    if (this.state.fetching) return null;
+    if (this.state.fetching) return <Loading />;
     
     return (
       <div className="tweets">

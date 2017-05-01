@@ -6,6 +6,7 @@ import {ProfileCard} from './ProfileCard';
 import Trends from './Trends';
 import Tweets from './Tweets';
 import {Follow} from './Follow';
+import {Loading} from './Loading';
 import {getUserInfo} from '../lib/helpers';
 
 class App extends Component {
@@ -32,7 +33,7 @@ class App extends Component {
 			});
   }
   render () {
-    if (this.state.fetching) return null;
+    if (this.state.fetching) return <Loading />;
 
     return (
       <div className="App">
