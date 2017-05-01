@@ -31,7 +31,7 @@ class Trends extends Component {
     
     return (
       <section className="trends">
-        <span className="trends-title">Trends</span>
+        <h2 className="trends-title">Trends</h2>
         <ul className="trends-list">
           {this.generateTrends(this.state.trends)}
         </ul>
