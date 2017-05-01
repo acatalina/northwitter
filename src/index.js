@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
-import './index.css';
+import './css/normalize.css';
+import './css/index.css';
 
 const ROOT = 'https://protected-oasis-31937.herokuapp.com';
 
