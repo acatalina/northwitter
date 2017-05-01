@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import {NavBar} from './NavBar';
 import {ProfileCard} from './ProfileCard';
 import Trends from './Trends';
+import Tweets from './Tweets';
 import {getUserInfo} from '../lib/helpers';
 
 class App extends Component {
@@ -37,6 +38,7 @@ class App extends Component {
         <NavBar avatar_url={this.state.userProfile.avatar_url}/>
         <ProfileCard userProfile={this.state.userProfile}/>
         <Trends ROOT={this.props.ROOT}/>
+        <Tweets ROOT={this.props.ROOT}/>
       </div>
     );
   }

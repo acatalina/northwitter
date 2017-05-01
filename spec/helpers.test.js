@@ -84,3 +84,46 @@ describe('helpers.getTrends', () => {
     expect(actual).toEqual(expected);
   });
 });
+
+describe('helpers.getTweetsSortedByDate', () => {
+  const actual = helpers.getTweetsSortedByDate({
+    body: {
+      tweetData: {
+        users: [
+          {status: {created_at: '2017-04-30T17:05:20.139Z'}}, {status: {created_at: '2017-05-30T17:30:20.139Z'}}
+        ]
+      }
+    }
+  });
+
+  const expected = [
+    {status: {created_at: '2017-05-30T17:30:20.139Z'}}, {status: {created_at: '2017-04-30T17:05:20.139Z'}}
+  ];
+  
+  it('extracts the tweets from a response and sorts them in descending order by date', () => {
+    expect(actual).toEqual(expected);
+  });
+});
+
+describe('helpers.transformDate', () => {
+  it('returns less than an hours ago when the difference is less than an hour ago', () => {
+    const actual = helpers.transformDate('2017-05-30T16:31:20.139Z', '2017-05-30T17:30:20.139Z');
+    const expected = 'less than an hour ago';
+
+    expect(actual).toBe(expected);
+  });
+  
+  it('transforms a date into hours when less than 24hours', () => {
+    const actual = helpers.transformDate('2017-05-30T15:30:20.139Z', '2017-05-30T17:30:20.139Z');
+    const expected = '2h';
+
+    expect(actual).toBe(expected);
+  });
+
+  it('transforms a date into months when more than 24hours', () => {
+    const actual = helpers.transformDate('2017-05-29T17:30:20.139Z', '2017-05-30T17:30:20.139Z');
+    const expected = '29 Apr';
+
+    expect(actual).toBe(expected);
+  });
+});
