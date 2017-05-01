@@ -122,10 +122,15 @@ h1, h2, h3, h4 {
 
   /* ProfileCard */
 
-  .profile-card {
+  .profile-card,
+  .trends {
     background-color: #fff;
     border-radius: .5em;
-    border: .1em solid #e6ecf0;
+    border: 1px solid #e6ecf0;
+    margin-bottom: .5em;
+  }
+
+  .profile-card {
     background: linear-gradient(0deg, #fff 60%, #1DA1F2 30%);
     text-align: center;
     padding: 4em .5em .5em .5em;
@@ -164,6 +169,44 @@ h1, h2, h3, h4 {
   .blue {
     color: #1DA1F2;
   }
+
+  /* Trend */
+
+  .trends {
+    color: #66757f;
+    padding: 1em;
+  }
+
+  .trends-title {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+  }
+
+  .trend {
+    color: #0084B4;
+    margin-bottom: 1em;
+    font-size: .8em;
+  }
+
+  .trend-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    font-weight: 900;
+  }
+
+  .trend-link:hover {
+    text-decoration: underline;
+    color: #1DA1F2;
+  }
+
+  .trend-vol {
+    margin-top: .2em;
+    display: block;
+    color: #66757f;
+  }
+
 }
 
 @media (min-width: 557px) {
