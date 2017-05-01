@@ -1,4 +1,5 @@
 import React from 'react';
+import addUser from '../imgs/user-add.png';
 
 export const Follow = () => {
   return (
@@ -16,7 +17,7 @@ export const Follow = () => {
           <button className="button"
             type="button" 
             href="https://twitter.com/drasek2">
-            <img src="/imgs/user-add.png" alt="follow"/>
+            <img src={addUser} alt="follow"/>
             <span>Follow</span>
           </button>
         </div>
