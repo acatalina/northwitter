@@ -3,7 +3,7 @@
 }
 
 .loader {
-  background-image: url('/imgs/twitterlogo.ico');
+  background-image: url('../imgs/twitterlogo.ico');
   border: 10px solid #0084B4;
   border-radius: 50%;
   width: 6em;
