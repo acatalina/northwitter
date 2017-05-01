@@ -36,9 +36,16 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar avatar_url={this.state.userProfile.avatar_url}/>
-        <ProfileCard userProfile={this.state.userProfile}/>
-        <Trends ROOT={this.props.ROOT}/>
-        <Tweets ROOT={this.props.ROOT}/>
+        <main className="container row">
+          <div className="col col-3 medium-none">
+            <ProfileCard userProfile={this.state.userProfile}/>
+            <Trends ROOT={this.props.ROOT}/>
+          </div>
+          <div className="col6-m12">
+            <Tweets ROOT={this.props.ROOT}/>
+          </div>
+          <div className="col-3 medium-none"></div>
+        </main>
       </div>
     );
   }

@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 export const NavBar = (props) => {
   return (
     <nav className="nav">
-      <div className="container col">
-        <ul className="flex col-3">
+      <div className="container row">
+        <ul className="row col-4">
           <li className="nav-item">
             <div className="nav-link">
               <img src="/imgs/home.png" alt="home"/>
@@ -35,12 +35,12 @@ export const NavBar = (props) => {
             <div className="nav-selector"></div>
           </li>
         </ul>
-        <span className="flex flex-is-center col-3">
+        <span className="row flex-is-center col-4">
           <div className="nav-item">
             <img className="mobile-none" src="/imgs/twitterlogo.ico" alt="twitter"/>
           </div>
         </span>
-        <span className="flex flex-is-right col-3">
+        <span className="row flex-is-right col-4">
           <div className="nav-item">
             <img className="img-small-circle" src={props.avatar_url} alt="avatar" />
           </div>
