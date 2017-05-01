@@ -5,7 +5,9 @@ export const ProfileCard = (props) => {
   return (
     <section className="profile-card">
       <div className="user-wrapper row">
-        <img className="user-avatar" src={props.userProfile.avatar_url} alt="avatar" />
+        <div>
+          <img className="user-avatar" src={props.userProfile.avatar_url} alt="avatar" />
+        </div>
         <div className="user-handle">  
           <h3>{props.userProfile.username}</h3>
           <h4>{props.userProfile.handle}</h4>

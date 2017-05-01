@@ -69,6 +69,8 @@ export const addLinksToText = (props) => {
   let {urls} = props.entities;
   let newText = props.text;
 
+  newText = newText.replace('&amp;', '&');
+
   Object.keys(urls).forEach((key) => {
     newText = reactReplace(newText, urls[key].url, (match, i) => (
       <a key={match + i} href={match}>{urls[key].display_url}</a>

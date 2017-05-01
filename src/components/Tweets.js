@@ -30,7 +30,7 @@ class Tweets extends Component {
     if (this.state.fetching) return null;
     
     return (
-      <div className="tweet-wrapper">
+      <div className="tweets">
         {this.generateTweets(this.state.tweets)}
       </div>
     );

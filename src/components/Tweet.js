@@ -4,19 +4,19 @@ import PropTypes from 'prop-types';
 
 export const Tweet = (props) => {
   return (
-    <div className="tweet">
-      <div className="tweet-header">
+    <div className="tweet row">
+      <div className="tweet-header col-1">
         <a href={props.username_url}>
           <img className="user-avatar" src={props.avatar} alt="avatar" />
         </a>
       </div>
-      <div className="tweet-content">
+      <div className="tweet-content col-11">
         <span className="tweet-username">{props.username}</span>
         <span className="tweet-handler">@{props.handler}</span>
-        <span className="tweet-age"> - {transformDate(props.date)}</span>
+        <span className="tweet-age"> · {transformDate(props.date)}</span>
         <p className="tweet-text">{addLinksToText(props)}</p>
+        {getMedia(props.entities.media)}
       </div>
-      {getMedia(props.entities.media)}
     </div>
   );
 };
