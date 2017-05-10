@@ -1,4 +1,4 @@
-import React,{Component} from 'react';
+import React, {Component} from 'react';
 import request from 'superagent';
 import {getTrends} from '../lib/helpers';
 import {Trend} from './Trend';
@@ -29,7 +29,7 @@ class Trends extends Component {
   }
   render () {
     if (this.state.fetching) return <Loading />;
-    
+
     return (
       <section className="trends">
         <h2 className="trends-title">Trends</h2>
@@ -42,9 +42,9 @@ class Trends extends Component {
   generateTrends (trends) {
     return trends.map((trend, i) => {
       return (
-        <Trend key={i} 
-          name={trend.name} 
-          vol={trend.tweet_volume} 
+        <Trend key={i}
+          name={trend.name}
+          vol={trend.tweet_volume}
           url={trend.url}
         />
       );

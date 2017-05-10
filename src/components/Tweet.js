@@ -29,7 +29,7 @@ function getMedia (arrayMedia) {
       {arrayMedia.map((media, i) => {
         return (
           <a key={i} href={media.url}>
-            <img className="tweet-img col-12" src={media.media_url_https} alt="img"/>
+            <img className="tweet-img col-12" src={media.media_url_https} alt="img" />
           </a>
         );
       })}

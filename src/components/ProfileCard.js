@@ -8,7 +8,7 @@ export const ProfileCard = (props) => {
         <div>
           <img className="user-avatar" src={props.userProfile.avatar_url} alt="avatar" />
         </div>
-        <div className="user-handle">  
+        <div className="user-handle">
           <h3>{props.userProfile.username}</h3>
           <h4>{props.userProfile.handle}</h4>
         </div>
@@ -38,5 +38,5 @@ export const ProfileCard = (props) => {
 };
 
 ProfileCard.propTypes = {
-  userProfile: PropTypes.object.isRequired,
+  userProfile: PropTypes.object.isRequired
 };

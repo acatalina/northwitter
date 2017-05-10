@@ -16,7 +16,7 @@ export const getUserInfo = (response) => {
 
 export const orderByTweetVolume = (trends) => {
   return trends.sort((trendA, trendB) => {
-    return trendB.tweet_volume - trendA.tweet_volume; 
+    return trendB.tweet_volume - trendA.tweet_volume;
   });
 };
 
@@ -28,13 +28,13 @@ export const filterTrendsWithVolumeNull = (trends) => {
 
 export const getTrends = (response) => {
   let trends = response.body.tweetData.trends[0].trends;
-  
+
   return orderByTweetVolume(filterTrendsWithVolumeNull(trends));
 };
 
 export const formatTweetVolume = (number) => {
   let formatedNumber = number / 1000;
-  
+
   if (Number.isInteger(formatedNumber)) {
     number = `${formatedNumber}K`;
   } else if (formatedNumber > 1) {
@@ -77,13 +77,13 @@ export const addLinksToText = (props) => {
     ));
   });
 
-  newText = reactReplace(newText, /#(\w+)/g , (match, i) => (
+  newText = reactReplace(newText, /#(\w+)/g, (match, i) => (
     <a key={match + i} href={`https://twitter.com/hashtag/${match}`}>#{match}</a>
   ));
-  
+
   newText = reactReplace(newText, /\B@(\w+)/g, (match, i) => (
     <a key={match + i} href={`https://twitter.com/${match}`}>@{match}</a>
   ));
-  
+
   return newText;
 };

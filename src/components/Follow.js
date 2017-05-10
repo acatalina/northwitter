@@ -15,9 +15,9 @@ export const Follow = () => {
           <span className="tweet-username">drasek</span>
           <span className="tweet-handler">@drasek2</span>
           <button className="button"
-            type="button" 
+            type="button"
             href="https://twitter.com/drasek2">
-            <img src={addUser} alt="follow"/>
+            <img src={addUser} alt="follow" />
             <span>Follow</span>
           </button>
         </div>

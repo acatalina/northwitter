@@ -1,4 +1,4 @@
-import React,{Component} from 'react';
+import React, {Component} from 'react';
 import request from 'superagent';
 import {Tweet} from './Tweet';
 import {Loading} from './Loading';
@@ -29,7 +29,7 @@ class Tweets extends Component {
   }
   render () {
     if (this.state.fetching) return <Loading />;
-    
+
     return (
       <div className="tweets">
         {this.generateTweets(this.state.tweets)}
@@ -40,7 +40,7 @@ class Tweets extends Component {
     return tweets.map((tweet, i) => {
       return (
         <Tweet key={i}
-          avatar={tweet.profile_image_url} 
+          avatar={tweet.profile_image_url}
           username={tweet.name}
           username_url={tweet.url}
           handler={tweet.screen_name}

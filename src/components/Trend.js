@@ -5,7 +5,7 @@ import {formatTweetVolume} from '../lib/helpers';
 export const Trend = (props) => {
   return (
     <li className="trend">
-      <a className="trend-link" 
+      <a className="trend-link"
         href={props.url}>
         {props.name}
       </a>
